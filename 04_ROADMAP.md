@@ -2,6 +2,19 @@
 
 This document outlines a strategic, multi-phase plan for developing the DynamicLoRA system from conceptual architecture into a validated, production-ready implementation.
 
+## Realistic Timeline & Resources
+
+**With proper resources (3-5 engineers, GPU cluster):**
+- **12 months to production-ready v1.0**
+- **18 months to full-featured v2.0**
+
+**Critical dependencies:**
+- See [06_RISKS_AND_MITIGATIONS.md](06_RISKS_AND_MITIGATIONS.md) for risk analysis
+- Staged rollout (validate each phase before proceeding)
+- Empirical tuning (hyperparameters, thresholds)
+
+**Confidence:** 85% that core mechanisms work (after mitigation strategies)
+
 ## Phase 1: Proof of Concept (Minimal Viable System)
 
 **Goal:** Validate core mechanisms in a controlled, small-scale experiment.
@@ -27,8 +40,9 @@ This document outlines a strategic, multi-phase plan for developing the DynamicL
 
 - [ ] **1.4: Simple Migration (Context → Agent)**
   - Manual trigger (no bandwidth queue yet)
-  - Circuit extraction from synthetic trajectories
+  - **Gradient pattern extraction** (v1.0: not full circuits, see 06_RISKS)
   - Verify pattern moves from fast → slow layer
+  - Pattern consolidation via gradient direction
 
 - [ ] **1.5: Metrics Collection**
   - Log phase state distribution over time
@@ -38,9 +52,10 @@ This document outlines a strategic, multi-phase plan for developing the DynamicL
 **Success Criteria:**
 - Phase transition observable (parameters flip SCREENED/FREE)
 - Autocorrelation detects repeating patterns
-- Migration preserves functionality (circuit works in Agent layer)
+- Migration preserves functionality (pattern works in Agent layer)
+- Catastrophic forgetting < 20% (old task accuracy > 80%)
 
-**Timeline:** 2-4 weeks
+**Timeline:** 4-6 weeks (realistic with testing + debugging)
 
 ---
 

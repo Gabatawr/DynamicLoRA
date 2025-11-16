@@ -166,6 +166,7 @@ This repository contains the complete conceptual architecture:
 - **[02_ARCHITECTURE.md](02_ARCHITECTURE.md)** - Components and their responsibilities
 - **[03_DATA_FLOW.md](03_DATA_FLOW.md)** - End-to-end lifecycle (inference + learning)
 - **[04_ROADMAP.md](04_ROADMAP.md)** - Development plan, experiments, research questions
+- **[06_RISKS_AND_MITIGATIONS.md](06_RISKS_AND_MITIGATIONS.md)** - Critical risks + concrete solutions
 
 ---
 
@@ -179,11 +180,13 @@ This repository contains the complete conceptual architecture:
 - Active collapse quantum theory (observation-based learning)
 
 **Next Steps:**
-- Phase 1: Proof of concept (two-layer system, phase transitions)
+- Phase 1: Proof of concept (gradient patterns, phase transitions)
 - Phase 2: Emergent temporal scales validation
 - Phase 3: Multi-agent swarm dynamics
 
-**Timeline:** 12-18 months to production readiness
+**Timeline:** 12 months to production v1.0 (with proper resources: 3-5 engineers, GPUs)
+
+**Confidence:** 85% (after addressing critical risks—see [06_RISKS_AND_MITIGATIONS.md](06_RISKS_AND_MITIGATIONS.md))
 
 ---
 
